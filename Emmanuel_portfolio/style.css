@@ -41,12 +41,13 @@ body{
   padding: 1em;
   text-align: center;
   color: rgb(68, 67, 67);
-  border: so;
+  border: 20px;
   /* background: darkcyan; */
   opacity: 0.8;
   border: 1px solid black;
   border-radius: 20px;
 }
+
 .main-nav a:hover
 {
 /*   background: rgb(90, 0, 90); */
@@ -56,7 +57,17 @@ body{
   border-radius: 50px;
 }
 
-
+.headermain{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    transform: translate(20%,20%);
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 20px;
+}
 .header{
     height: 95vh;
     background-image:url(/images/church-view.JPG);
@@ -64,8 +75,8 @@ body{
     background-position: top;
     position: relative;
     clip-path: polygon(0 0,100% 0,100% 75vh, 0 100% );
-
 }
+
 .header2{
     display: block;
     font-size: 20px;
@@ -83,9 +94,23 @@ body{
 
 
 }
+
 .logo{
     padding-top: 10px;
     height: 35px;
+    animation-name: moveInlogo;
+    animation-duration: 9s;
+}
+
+@keyframes moveInlogo{
+    0%{
+        opacity: 0;
+        transform: translate3d(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate3d(0px);
+    }
 }
 
 .text-box{
@@ -99,9 +124,8 @@ body{
 .heading-primary{
     color: #fff;
     text-transform: uppercase;
-
     backface-visibility: hidden;
-    margin-bottom: -20px;
+    margin-bottom:-20px;
 
 }
 
@@ -109,11 +133,10 @@ body{
     display: block;
     font-size: 60px;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 30px;
     animation-name: moveInLeft;
     animation-duration: 1s;
 }
-
 
 .heading-primary-sub{
     display: block;
@@ -121,7 +144,6 @@ body{
     font-weight: 400;
     letter-spacing: 17.4px;
     margin-bottom: 20px;
-
     animation-name: moveInRight;
     animation-duration: 1s;
     /* animation-timing-function: ease-in; */
@@ -135,11 +157,9 @@ body{
     0%{
         opacity: 0;
         transform: translateX(-100px);
-        
     }
     80%{
         transform: translateX(10px);
-
     }
     100%{
         opacity: 1;
@@ -246,7 +266,6 @@ body{
     left: 0;
     z-index: -1;
     transition: all .4s;
-
 }
 
 .btn-white::after{
@@ -263,6 +282,63 @@ body{
     animation: moveInBtnUp;
     animation-fill-mode: backwards;
 }
+.all{
+    background-color: antiquewhite;
+}
+.carda{
+   
+    display: flex;
+    padding: 10px;
+    animation-name: moveInCard;
+    animation-duration: 6s;
+}
+.card1{
+    
+    display: flex;
+    padding: 10px;
+    animation-name: moveInCard;
+    animation-duration: 6s;
+}
+.card2{
+    display: flex;
+    padding: 10px;
+    animation-name: moveInCard;
+    animation-duration: 6s;
+}
+.card3{
+    display: flex;
+    padding: 10px;
+    animation-name: moveInCard;
+    animation-duration: 6s;
+}
+.card4{
+    display: flex;
+    padding: 10px;
+    animation-name: moveInCard;
+    animation-duration: 6s;
+}
+.card1:hover{
+    transform: translate(2.2px);
+}
+@keyframes moveInCard{
+    0%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100%{
+        opacity: 1;
+        transition: translateY(0px);
+    }
+}
+
+.image1
+.image2
+.image3
+.image4
+.image5{
+    border-radius: 20px;
+}
+
 .about{
     border-radius: 200px;
     animation-name: moveInImage;
@@ -334,6 +410,7 @@ body{
      color: #fff;
      background-color: black;
      border-radius: 50px;
+     height: 100px;
 }
 
 /* .rty{
